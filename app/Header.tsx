@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { TwitterLogoSvg } from './TwitterLogoSvg';
 
 export function Header() {
@@ -5,11 +6,13 @@ export function Header() {
     <div style={{ padding: '100px 20px 80px' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
         <h1 style={{ fontSize: '32px', fontWeight: 900 }}>깃발연합</h1>
-        <TwitterLogoSvg />
+        <Link href="https://x.com/twidy_official" target="_blank">
+          <TwitterLogoSvg />
+        </Link>
       </div>
       <p style={{ fontSize: '18px', fontWeight: 500, paddingRight: '20px' }}>
-        온라인에서 시위 속 연대를 기록합니다. 시위 현장에서 깃발 사진을 찍었다면
-        누구나 깃발연합에 함께할 수 있습니다.
+        거리의 깃발 사진을 모읍니다. 함께 행진했던 깃발을 다시 보며 다른 거리,
+        다른 날에 있었더라도 여기에서는 모두 함께입니다.
       </p>
     </div>
   );
