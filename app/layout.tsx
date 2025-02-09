@@ -1,21 +1,21 @@
-import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
-import './globals.css';
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
 
 const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: '깃발연합',
+  title: "깃발연합",
   description:
-    '거리의 깃발 사진을 모읍니다. 함께 행진했던 깃발을 다시 보며 다른 거리, 다른 날에 있었더라도 여기에서는 모두 함께입니다.',
+    "거리의 깃발 사진을 모읍니다. 함께 행진했던 깃발을 다시 보며 다른 거리, 다른 날에 있었더라도 여기에서는 모두 함께입니다.",
 };
 
 export default function RootLayout({
@@ -26,6 +26,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-Y64WDFLF91"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-Y64WDFLF91');
+            `,
+          }}
+        />
         <link
           rel="stylesheet"
           as="style"
