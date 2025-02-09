@@ -7,3 +7,10 @@ body {
   background: var(--background);
   font-family: Pretendard;
 }
+
+/* 메인 컨텐츠의 최대 넓이 설정 */
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
