@@ -18,7 +18,7 @@ export default function Home() {
     <div>
       <Head>
         <title>깃발연합</title>
-        <meta property="og:title" content="깃발연합" key="title" />
+        <meta property="og:title" content="깃발연합-" key="title" />
         <meta
           property="og:description"
           content="거리의 깃발 사진을 모읍니다. 함께 행진했던 깃발을 다시 보며 다른 거리, 다른 날에 있었더라도 여기에서는 모두 함께입니다."
