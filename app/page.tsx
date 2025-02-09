@@ -1,8 +1,8 @@
-import Image from "next/image";
-import { Header } from "./Header";
-import { partition } from "es-toolkit";
-import { flags } from "./flags";
-import Head from "next/head";
+import Image from 'next/image';
+import { Header } from './Header';
+import { partition } from 'es-toolkit';
+import { flags } from './flags';
+import Head from 'next/head';
 
 export default function Home() {
   const [first, second] = partition(
@@ -47,29 +47,29 @@ export default function Home() {
 }
 
 function FlagItem({ src, updated }: { src: string; updated: string }) {
-  const isNew = updated === "2025-02-09";
+  const isNew = updated === '2025-02-09';
 
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: 'relative' }}>
       <Image
         key={src}
         src={`/flags/${formatDateDirectory(updated)}/${src}`}
-        alt={src.replace(".png", "")}
+        alt={src.replace('.png', '')}
         width={0}
         height={0}
         sizes="50vw"
-        style={{ width: "100%", height: "auto" }}
+        style={{ width: '100%', height: 'auto' }}
       />
       {isNew && (
         <div
           style={{
-            position: "absolute",
-            top: "8px",
-            left: "8px",
-            border: "3px solid black",
-            backgroundColor: "white",
-            padding: "0 4px",
-            fontSize: "13px",
+            position: 'absolute',
+            top: '8px',
+            left: '8px',
+            border: '3px solid black',
+            backgroundColor: 'white',
+            padding: '0 4px',
+            fontSize: '13px',
             fontWeight: 800,
           }}
         >
@@ -81,6 +81,6 @@ function FlagItem({ src, updated }: { src: string; updated: string }) {
 }
 
 function formatDateDirectory(updatedAt: string) {
-  const [year, month, date] = updatedAt.split("-");
-  return `${month}${date}`;
+  const splittedDate = updatedAt.split('-');
+  return `${splittedDate[1]}${splittedDate[2]}`;
 }
