@@ -1,7 +1,7 @@
 export const flags = [
   { src: "국민이_주인이다.png", updated: "2025-02-01" },
   { src: "대구_경북의_딸.png", updated: "2025-02-01" },
-  { src: "도리깨_한국_협회지부.png", updated: "2025-02-01" },
+  { src: "도리깨_한국_협회지부.png", updated: "2025-02-01", isOriginal: true },
   { src: "돈없고_병든_예술인_연합.png", updated: "2025-02-01" },
   { src: "만두노총_군만두노조.png", updated: "2025-02-01" },
   { src: "무인도_주민_대표_연합.png", updated: "2025-02-01" },

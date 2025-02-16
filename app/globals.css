@@ -14,3 +14,12 @@ body {
   margin: 0 auto;
   padding: 0 1rem;
 }
+
+@keyframes upDown {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
