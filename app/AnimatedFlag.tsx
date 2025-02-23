@@ -10,9 +10,11 @@ const 배경패딩 = 20;
 export function AnimatedFlag({
   src,
   updated,
+  onClick,
 }: {
   src: string;
   updated: string;
+  onClick: () => void;
 }) {
   const [width, setWidth] = useState(0);
   const isNew = updated === "2025-02-09";
@@ -34,6 +36,7 @@ export function AnimatedFlag({
           setWidth(container.clientWidth - 배경패딩 * 2);
         }
       }}
+      onClick={onClick}
     >
       <div
         style={{

@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -26,20 +27,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-Y64WDFLF91"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-Y64WDFLF91');
-            `,
-          }}
-        />
         <link
           rel="stylesheet"
           as="style"
@@ -54,6 +41,7 @@ export default function RootLayout({
 
         {children}
       </body>
+      <GoogleAnalytics gaId="G-Y64WDFLF91" />
     </html>
   );
 }

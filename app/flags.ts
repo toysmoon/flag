@@ -42,4 +42,17 @@ export const flags = [
   { src: "한국여성민우회.png", updated: "2025-02-09" },
   { src: "한국외국어대학교_민주동문회.png", updated: "2025-02-09" },
   { src: "호그와트_민주동문회_그리핀도르_지부.png", updated: "2025-02-09" },
-];
+
+  {
+    src: "내란범이_너무_많아서_찾을_수_없는_것인가.png",
+    updated: "2025-02-23",
+  },
+  { src: "뒈져라반역자.png", updated: "2025-02-23" },
+  {
+    src: "우리는_여기서_죽지_않는다_왜냐하면_이번_회차에는_배신하지_않는_동지들이_있으니까.png",
+    updated: "2025-02-23",
+  },
+  { src: "우리는_이_정부의_결말을_알고_있다.png", updated: "2025-02-23" },
+  { src: "우리는_이_정부의_결말을_알고_있다_2.png", updated: "2025-02-23" },
+  { src: "정치하는_엄마들.png", updated: "2025-02-23" },
+].sort((a, b) => new Date(b.updated).getTime() - new Date(a.updated).getTime());
