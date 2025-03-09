@@ -16,7 +16,7 @@ export function FlagItem({
   isOriginal: boolean;
   flagId: number;
 }) {
-  const isNew = updated === "2025-02-23";
+  const isNew = new Date(updated) >= new Date("2025-03-02");
   const moveTo = useTransitionRouter();
 
   if (isOriginal) {
