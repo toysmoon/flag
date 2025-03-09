@@ -14,22 +14,15 @@ export const initAnimationFlag = async (
   element: HTMLDivElement,
   imageSrc: string
 ) => {
-  let scene: THREE.Scene;
-  let camera: THREE.PerspectiveCamera;
-  let renderer: THREE.WebGLRenderer;
-
-  let flag: THREE.Mesh;
-  let flagColor = "#ffffff";
-  let flagTexture: THREE.Texture | null = null;
-
+  const flagColor = "#ffffff";
   const width: number = element.clientWidth;
   const height: number = (width * 2) / 3;
 
-  scene = new THREE.Scene();
-  camera = new THREE.PerspectiveCamera(60, width / height, 1, 1000);
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(60, width / height, 1, 1000);
   camera.position.set(0, 0, 40);
   camera.lookAt(new THREE.Vector3(0, 0.0));
-  renderer = new THREE.WebGLRenderer({ antialias: true });
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setSize(width, height);
   element.appendChild(renderer.domElement);
   const light = new THREE.DirectionalLight("#FFFFFF", 2.0);
@@ -45,19 +38,18 @@ export const initAnimationFlag = async (
     side: THREE.DoubleSide,
   });
 
-  flag = new THREE.Mesh(geometry, material);
+  const flag = new THREE.Mesh(geometry, material);
   scene.add(flag);
 
   // 텍스쳐 로드
   const texture = await loadTexture(imageSrc);
   texture.magFilter = THREE.LinearFilter;
   texture.minFilter = THREE.LinearFilter;
-  flagTexture = texture;
 
   // 메테리얼 설정
   flag.material = new THREE.MeshLambertMaterial({
     color: flagColor,
-    map: flagTexture,
+    map: texture,
     side: THREE.DoubleSide,
   });
 
