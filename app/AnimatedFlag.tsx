@@ -30,7 +30,7 @@ export function AnimatedFlag({
 
   return (
     <div
-      style={{ position: "relative", background: "rgba(0, 0, 0, 0.1)" }}
+      style={{ position: "relative", background: "black" }}
       ref={(container) => {
         if (container) {
           setWidth(container.clientWidth - 배경패딩 * 2);

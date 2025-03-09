@@ -11,7 +11,7 @@ export const flags = [
   { src: "신지_에바에서_내려라_연합.png", updated: "2025-02-01" },
   { src: "쌍도의_딸.png", updated: "2025-02-01" },
   { src: "야생맘마먹음이보존협회.png", updated: "2025-02-01" },
-  { src: "전국_제다이_연합.png", updated: "2025-02-01" },
+  { src: "전국_제다이_연합.png", updated: "2025-02-01", isOriginal: true },
   { src: "지속_가능한_덕질.png", updated: "2025-02-01" },
   { src: "포스타입_분서갱유_반대연합.png", updated: "2025-02-01" },
   { src: "학생_사회주의자_연대.png", updated: "2025-02-01" },
