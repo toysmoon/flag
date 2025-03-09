@@ -2,8 +2,8 @@
 
 import { formatDateDirectory } from "@/utils/format";
 import Image from "next/image";
-import { AnimatedFlag } from "./AnimatedFlag";
 import { useTransitionRouter } from "./useTransitionRouter";
+import { AnimatedFlag } from "./AnimatedFlag";
 
 export function FlagItem({
   src,
